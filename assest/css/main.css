@@ -345,14 +345,6 @@
     position: relative;
 }
 
-.meunu__navbar-cart-icon{
-
-}
-
-.menu__navbar-cart-quantity{
-
-}
-
 .car__quantity{
     color: #e34444;
     padding:0 4px 0 10px;
@@ -632,10 +624,6 @@
     width: 100%;
 }
 
-.banner__img-right{
-    
-}
-
 .banner__wrap-top-right{
     position: relative;
     background: black;
@@ -745,10 +733,6 @@
     overflow: hidden;
 }
 
-.product-item-name{
-    
-}
-
 .product-item-name_link{
     font-size: 13px;
     font-weight: 400;
@@ -759,10 +743,6 @@
 
 .product-item-name_link:hover{
     color: #e34444;
-}
-
-.product-price{
-
 }
 
 .product-price-old{
@@ -808,9 +788,6 @@
 
 .product-addtocart:hover{
     background: #e34444;
-}
-
-.product-addtocart-icon{
 }
 
 .product-active{
@@ -1037,10 +1014,6 @@
     width: 100%;
 }
 
-.content__most{
-
-}
-
 .content__most-heading{
     font-size: 20px;
     color: rgb(51, 51, 51);
@@ -1157,20 +1130,12 @@
     -webkit-line-clamp: 4;
 }
 
-.trademark{
-
-}
-
 .trademark-list{
     display: flex;
     padding: 0;
     list-style-type: none;
     padding: 30px 0;
     border-top:solid 1px rgb(209, 208, 208) ;
-}
-
-.trademark-item{
-
 }
 
 .trademark-item_link{
@@ -1190,14 +1155,6 @@
     background: rgb(248, 248, 248);
     padding: 40px 0 40px 0;
     border-bottom: 1px solid rgb(226, 226, 226);
-
-}
-
-.footer__content{
-
-}
-
-.grid__row{
 
 }
 
@@ -1313,10 +1270,6 @@
 
 .footer__content-contact__btn:hover{
     background: #e34444;
-}
-
-.sns-footer{
-
 }
 
 .sns-footer_info{
