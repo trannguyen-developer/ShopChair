@@ -11,8 +11,10 @@
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="./assest/font/fontawesome-free-5.15.2-web/css/all.css">
+    <link rel="stylesheet" href="./assest/css/grid.css">
     <link rel="stylesheet" href="./assest/css/base.css">
     <link rel="stylesheet" href="./assest/css/main.css">
+    <link rel="stylesheet" href="./assest/css/responsive.css">
     <link rel="stylesheet" href="./assest/font/themify-icons/themify-icons.css">
     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZqAFO4showJvOxZaAaWKDnxEAeDPYnxoRuw&usqp=CAU" type="image/x-icon" />
 </head>
@@ -20,9 +22,9 @@
 <body>
     <div class="main">
         <div class="header" id="dautrang">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="header__nav">
-                    <ul class="header__nav-list flag-list">
+                    <ul class="header__nav-list flag-list ">
                         <li class="header__nav-item header__nav-item-left">
                             <a href="#" class="header__nav-item-link ">
                                 <img class="img-flagvietnamese" src="./assest/img/flag_vienamese.png" alt="">
@@ -66,7 +68,36 @@
                             </ul>
                         </li>
                     </ul>
-                    <ul class="header__nav-list ">
+                    <div class="header__nav-boat_anchor" >
+                        <i class="header__nav-boat_anchor-icon fas fa-anchor"></i>
+                        <ul class="header__nav-list mobile_tablet-header__nav-list hide-on-mobile-tablet">
+                            <li class="header__nav-item mobile_tablet-header__nav-item ">
+                                <a href="#" class="header__nav-item-link-right">
+                                    <i class="header__nav-icon-right fas fa-user"></i>
+                                    My Account
+                                </a>
+                            </li>
+                            <li class="header__nav-item mobile_tablet-header__nav-item ">
+                                <a href="#" class="header__nav-item-link-right">
+                                    <i class="header__nav-icon-right far fa-heart"></i>
+                                    Wishlist
+                                </a>
+                            </li>
+                            <li class="header__nav-item mobile_tablet-header__nav-item ">
+                                <a href="#" class="header__nav-item-link-right">
+                                    <i class="header__nav-icon-right fas fa-check"></i>
+                                    Checkout
+                                </a>
+                            </li>
+                            <li class="header__nav-item mobile_tablet-header__nav-item">
+                                <a href="#" class="header__nav-item-link-right">
+                                    <i class="header__nav-icon-right ti-key"></i>
+                                    Login
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="header__nav-list  hide-on-mobile-tablet">
                         <li class="header__nav-item header__nav-item-border">
                             <a href="#" class="header__nav-item-link-right">
                                 <i class="header__nav-icon-right fas fa-user"></i>
@@ -92,26 +123,27 @@
                             </a>
                         </li>
                     </ul>
+                    
                 </div>
             </div>
         </div>
         <div class="preferred">
-            <div class="grid">
-                <div class="grid__row grid__wrap">
-                    <div class="grid__column-3">
+            <div class="grid wide">
+                <div class="row grid__wrap">
+                    <div class="col l-3 m-3 c-12">
                         <div class="preferred__heading-logo">
                             <a href="#" class="preferred__heading-logo__link">
                                 SIMEN
                             </a>
                         </div>
                     </div>
-                    <div class="grid__column-3">
+                    <div class="col l-3 m-3 c-4">
                         <div class="preferred__wrap">
                             <a href="#" class="preffered__link">
                                 <div class="preferred-wrap-icon">
                                     <i class="preferred-icon fa fa-truck"></i>
                                 </div>
-                                <div class="preferred__info">
+                                <div class="preferred__info hide-on-mobile-tablet">
                                     <h3 class="preferred__info-heading">
                                         Free delivery worldwide
                                     </h3>
@@ -122,13 +154,13 @@
                             </a>
                         </div>
                     </div>
-                    <div class="grid__column-3">
+                    <div class="col l-3 m-3 c-4">
                         <div class="preferred__wrap">
                             <a href="#" class="preffered__link">
                                 <div class="preferred-wrap-icon">
                                     <i class="preferred-icon fas fa-cloud-upload-alt"></i>
                                 </div>
-                                <div class="preferred__info">
+                                <div class="preferred__info hide-on-mobile-tablet">
                                     <h3 class="preferred__info-heading">
                                         Up to 20% off cosy layers
                                     </h3>
@@ -139,13 +171,13 @@
                             </a>
                         </div>
                     </div>
-                    <div class="grid__column-3">
+                    <div class="col l-3 m-3 c-4">
                         <div class="preferred__wrap">
                             <a href="#" class="preffered__link">
                                 <div class="preferred-wrap-icon">
                                     <i class="preferred-icon fa fa-gift"></i>
                                 </div>
-                                <div class="preferred__info">
+                                <div class="preferred__info hide-on-mobile-tablet">
                                     <h3 class="preferred__info-heading">
                                         Buy 1 get 1 free
                                     </h3>
@@ -160,9 +192,144 @@
             </div>
         </div>
         <div class="menu">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="menu__navbar">
-                    <ul class="menu__navbar-list">
+                    <label for="mobile-menu_check" class="pc-slow-menu">
+                        <i class="pc-slow-menu-icon fas fa-bars"></i>
+                    </label>
+                    <input type="checkbox" id="mobile-menu_check">
+                    <label for="mobile-menu_check" class="overflay">
+
+                    </label>
+                    <ul class="mobile-menu__nav-list">
+                        <li class="mobile-menu__nav-item">
+                            <a href="#" class="mobile-menu__nav-link">
+                                Home
+                            </a>
+                            <ul class="mobile-sub__nav">
+                                <li class="mobile-menu__nav-item">
+                                    <a href="#" class="mobile-menu__nav-link">
+                                        Home Page 1
+                                    </a>
+                                </li>
+                                <li class="mobile-menu__nav-item">
+                                    <a href="#" class="mobile-menu__nav-link">
+                                        Home Page 2
+                                    </a>
+                                </li>
+                                <li class="mobile-menu__nav-item">
+                                    <a href="#" class="mobile-menu__nav-link">
+                                        Home Page 3
+                                    </a>
+                                </li>
+                                <li class="mobile-menu__nav-item">
+                                    <a href="#" class="mobile-menu__nav-link">
+                                        Home Page 4
+                                    </a>
+                                </li>
+                                <li class="mobile-menu__nav-item">
+                                    <a href="#" class="mobile-menu__nav-link">
+                                        Home Page 5
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mobile-menu__nav-item">
+                            <a href="#" class="mobile-menu__nav-link">
+                                Furniture
+                            </a>
+                            <ul class="mobile-sub__nav">
+                                <li class="mobile-menu__nav-item">
+                                    <a href="#" class="mobile-menu__nav-link">
+                                        Table
+                                    </a>
+                                    <ul class="mobile-sub__nav">
+                                        <li class="mobile-menu__nav-item">
+                                            <a href="#" class="mobile-menu__nav-link">
+                                                Living Room
+                                            </a>
+                                        </li>
+                                        <li class="mobile-menu__nav-item">
+                                            <a href="#" class="mobile-menu__nav-link">
+                                                Sofa Tables
+                                            </a>
+                                        </li>
+                                        <li class="mobile-menu__nav-item">
+                                            <a href="#" class="mobile-menu__nav-link">
+                                                End Tables
+                                            </a>
+                                        </li>
+                                        <li class="mobile-menu__nav-item">
+                                            <a href="#" class="mobile-menu__nav-link">
+                                                Coffee Tables
+                                            </a>
+                                        </li>
+                                        <li class="mobile-menu__nav-item">
+                                            <a href="#" class="mobile-menu__nav-link">
+                                                Pedestal Tables
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="mobile-menu__nav-item">
+                                    <a href="#" class="mobile-menu__nav-link">
+                                        Table
+                                    </a>
+                                </li>
+                                <li class="mobile-menu__nav-item">
+                                    <a href="#" class="mobile-menu__nav-link">
+                                        Table
+                                    </a>
+                                </li>
+                                <li class="mobile-menu__nav-item">
+                                    <a href="#" class="mobile-menu__nav-link">
+                                        Table
+                                    </a>
+                                </li>
+                                <li class="mobile-menu__nav-item">
+                                    <a href="#" class="mobile-menu__nav-link">
+                                        Table
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mobile-menu__nav-item">
+                            <a href="#" class="mobile-menu__nav-link">
+                                Coffee Tables
+                            </a>
+                        </li>
+                        <li class="mobile-menu__nav-item">
+                            <a href="#" class="mobile-menu__nav-link">
+                                Sofas
+                            </a>
+                        </li>
+                        <li class="mobile-menu__nav-item">
+                            <a href="#" class="mobile-menu__nav-link">
+                                Bedroom furniture
+                            </a>
+                        </li>
+                        <li class="mobile-menu__nav-item">
+                            <a href="#" class="mobile-menu__nav-link">
+                                Shop
+                            </a>
+                        </li>
+                        <li class="mobile-menu__nav-item">
+                            <a href="#" class="mobile-menu__nav-link">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="mobile-menu__nav-item">
+                            <a href="#" class="mobile-menu__nav-link">
+                                Shortcodes
+                            </a>
+                        </li>
+                        <li class="mobile-menu__nav-item">
+                            <a href="#" class="mobile-menu__nav-link">
+                                Contact us
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="menu__navbar-list hide-on-pc-slow">
                         <li class="menu__navbar-item">
                             <a href="#" class="menu__navbar-item__link">
                                 HOME
@@ -199,7 +366,7 @@
                             <a href="#" class="menu__navbar-item__link">
                                 FURNITURE
                             </a>
-                            <div class="grid__row wrap__furniture">
+                            <div class="row wrap__furniture">
                                 <div class="grid__column-3 ">
                                     <h3 class="menu__navbar-item__heading">
                                         TABLE
@@ -415,7 +582,7 @@
                             <a href="#" class="menu__navbar-item__link">
                                 BEDROOM FURNITURE
                             </a>
-                            <div class="grid__row wrap__bedroom">
+                            <div class="row wrap__bedroom">
                                 <div class="grid__column-3">
                                     <a href="#" class="bedroom__img-link">
                                         <img class="bedroom__img"
@@ -532,26 +699,26 @@
             </div>
         </div>
         <div class="banner">
-            <div class="grid">
-                <div class="grid__row">
-                    <div class="grid__column-6">
+            <div class="grid wide">
+                <div class="row mobile-wrap">
+                    <div class="col l-6 m-6 c-12">
                         <img class="banner__img-left"
                             src="./assest/img/banner1.png" alt="banner">
                     </div>
-                    <div class="grid__column-6" class="banner__img-right">
+                    <div class="col l-6 m-6 c-12" class="banner__img-right">
                         <div class="banner__wrap-top-right">
                             <img class="banner__img-top-right"
                             src="./assest/img/banner2.png" alt="banner">
                         </div>
                         <div class="banner-right-bottom">
-                            <div class="grid__row">
-                                <div class="grid__column-6 banner-wrap-right-bottom ">
+                            <div class="row">
+                                <div class="col l-6 m-6 c-12 banner-wrap-right-bottom ">
                                     <div class="close-door">
                                         <img alt="banner" class="close-door-img banner__img-right-bottom1"
                                         src="./assest/img/banner3.jpg">
                                     </div>
                                 </div>
-                                <div class="grid__column-6 banner-wrap-right-bottom">
+                                <div class="col l-6 m-6 c-12 banner-wrap-right-bottom">
                                     <div class="scale">
                                         <img alt="banner" class="scale-img banner__img-right-bottom1"
                                         src="./assest/img/banner4.jpg">
@@ -563,9 +730,9 @@
                 </div>
             </div>
         </div>
-        <div class="content">
-            <div class="grid">
-                <div class="product">
+        <div class="content mobile-wrap">
+            <div class="grid wide">
+                <div class="product ">
                     <div class="product__navbar">
                         <ul class="product__navbar-list">
                             <li class="product__navbar-item">
@@ -587,200 +754,201 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__row-2__4">
-
-                        <div class="grid__column-2_4 wrap-product" >
-                            <a href="#" class="product-item-img_link">
-                                <img class="product-item-img"
-                                src="./assest/img/product1.jpg"
-                                alt="product">
-                                    <div href="#" class="product-addtocart">
-                                        <i class="product-addtocart-icon fas fa-shopping-cart"></i>
-                                        ADD TO CART
+                    <div class="content__product-item">
+                        <div class="row">
+                            <div class="col l-2-4 m-3 c-6 wrap-product" >
+                                <a href="#" class="product-item-img_link">
+                                    <img class="product-item-img"
+                                    src="./assest/img/product1.jpg"
+                                    alt="product">
+                                        <div href="#" class="product-addtocart">
+                                            <i class="product-addtocart-icon fas fa-shopping-cart"></i>
+                                            ADD TO CART
+                                        </div>
+                                    <div class="product-active">
+                                        <div href="#" class="product-active_link">
+                                            <i class="product-active-icon fas fa-heart"></i>
+                                        </div>
+                                        <div href="#" class="product-active_link ">
+                                            <i class="product-active-icon fas fa-random"></i>
+                                        </div>
+                                        <div href="#" class="product-active_link">
+                                            <i class="product-active-icon far fa-eye"></i>
+                                        </div>
                                     </div>
-                                <div class="product-active">
-                                    <div href="#" class="product-active_link">
-                                        <i class="product-active-icon fas fa-heart"></i>
-                                    </div>
-                                    <div href="#" class="product-active_link ">
-                                        <i class="product-active-icon fas fa-random"></i>
-                                    </div>
-                                    <div href="#" class="product-active_link">
-                                        <i class="product-active-icon far fa-eye"></i>
-                                    </div>
-                                </div>
-                            </a>
-                            <h4 class="product-item-name">
-                                <a href="#" class="product-item-name_link">
-                                    Modular Modern
                                 </a>
-                            </h4>
-                            <div class="product-price">
-                                <span class="product-price-old"></span>
-                                <span class="product-price-current">$ 10.00</span>
-                            </div>
-                            <div class="product-ratting">
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="grid__column-2_4 wrap-product" >
-                            <a href="#" class="product-item-img_link">
-                                <img class="product-item-img"
-                                src="./assest/img/product2.jpg"
-                                alt="product">
-                                    <div href="#" class="product-addtocart">
-                                        <i class="product-addtocart-icon fas fa-shopping-cart"></i>
-                                        ADD TO CART
-                                    </div>
-                                <div class="product-active">
-                                    <div href="#" class="product-active_link">
-                                        <i class="product-active-icon fas fa-heart"></i>
-                                    </div>
-                                    <div href="#" class="product-active_link ">
-                                        <i class="product-active-icon fas fa-random"></i>
-                                    </div>
-                                    <div href="#" class="product-active_link">
-                                        <i class="product-active-icon far fa-eye"></i>
-                                    </div>
+                                <h4 class="product-item-name">
+                                    <a href="#" class="product-item-name_link">
+                                        Modular Modern
+                                    </a>
+                                </h4>
+                                <div class="product-price">
+                                    <span class="product-price-old"></span>
+                                    <span class="product-price-current">$ 10.00</span>
                                 </div>
-                            </a>
-                            <h4 class="product-item-name">
-                                <a href="#" class="product-item-name_link">
-                                    Modular Modern
-                                </a>
-                            </h4>
-                            <div class="product-price">
-                                <span class="product-price-old">$ 9.00</span>
-                                <span class="product-price-current">$ 7.00</span>
-                            </div>
-                            <div class="product-ratting">
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="grid__column-2_4 wrap-product" >
-                            <a href="#" class="product-item-img_link">
-                                <img class="product-item-img"
-                                src="./assest/img/product3.jpg"
-                                alt="product">
-                                    <div href="#" class="product-addtocart">
-                                        <i class="product-addtocart-icon fas fa-shopping-cart"></i>
-                                        ADD TO CART
-                                    </div>
-                                <div class="product-active">
-                                    <div href="#" class="product-active_link">
-                                        <i class="product-active-icon fas fa-heart"></i>
-                                    </div>
-                                    <div href="#" class="product-active_link ">
-                                        <i class="product-active-icon fas fa-random"></i>
-                                    </div>
-                                    <div href="#" class="product-active_link">
-                                        <i class="product-active-icon far fa-eye"></i>
-                                    </div>
+                                <div class="product-ratting">
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
                                 </div>
-                            </a>
-                            <h4 class="product-item-name">
-                                <a href="#" class="product-item-name_link">
-                                    Modular Modern
+                            </div>
+                            <div class="col l-2-4 m-3 c-6 wrap-product" >
+                                <a href="#" class="product-item-img_link">
+                                    <img class="product-item-img"
+                                    src="./assest/img/product2.jpg"
+                                    alt="product">
+                                        <div href="#" class="product-addtocart">
+                                            <i class="product-addtocart-icon fas fa-shopping-cart"></i>
+                                            ADD TO CART
+                                        </div>
+                                    <div class="product-active">
+                                        <div href="#" class="product-active_link">
+                                            <i class="product-active-icon fas fa-heart"></i>
+                                        </div>
+                                        <div href="#" class="product-active_link ">
+                                            <i class="product-active-icon fas fa-random"></i>
+                                        </div>
+                                        <div href="#" class="product-active_link">
+                                            <i class="product-active-icon far fa-eye"></i>
+                                        </div>
+                                    </div>
                                 </a>
-                            </h4>
-                            <div class="product-price">
-                                <span class="product-price-old">$ 3.00</span>
-                                <span class="product-price-current">$ 2.00</span>
-                            </div>
-                            <div class="product-ratting">
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="grid__column-2_4 wrap-product" >
-                            <a href="#" class="product-item-img_link">
-                                <img class="product-item-img"
-                                src="./assest/img/product4.jpg"
-                                alt="product">
-                                    <div href="#" class="product-addtocart">
-                                        <i class="product-addtocart-icon fas fa-shopping-cart"></i>
-                                        ADD TO CART
-                                    </div>
-                                <div class="product-active">
-                                    <div href="#" class="product-active_link">
-                                        <i class="product-active-icon fas fa-heart"></i>
-                                    </div>
-                                    <div href="#" class="product-active_link ">
-                                        <i class="product-active-icon fas fa-random"></i>
-                                    </div>
-                                    <div href="#" class="product-active_link">
-                                        <i class="product-active-icon far fa-eye"></i>
-                                    </div>
+                                <h4 class="product-item-name">
+                                    <a href="#" class="product-item-name_link">
+                                        Modular Modern
+                                    </a>
+                                </h4>
+                                <div class="product-price">
+                                    <span class="product-price-old">$ 9.00</span>
+                                    <span class="product-price-current">$ 7.00</span>
                                 </div>
-                            </a>
-                            <h4 class="product-item-name">
-                                <a href="#" class="product-item-name_link">
-                                    Modular Modern
-                                </a>
-                            </h4>
-                            <div class="product-price">
-                                <span class="product-price-old"></span>
-                                <span class="product-price-current">$ 13.00</span>
-                            </div>
-                            <div class="product-ratting">
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="grid__column-2_4 wrap-product" >
-                            <a href="#" class="product-item-img_link">
-                                <img class="product-item-img"
-                                src="./assest/img/product5.jpg"
-                                alt="product">
-                                    <div href="#" class="product-addtocart">
-                                        <i class="product-addtocart-icon fas fa-shopping-cart"></i>
-                                        ADD TO CART
-                                    </div>
-                                <div class="product-active">
-                                    <div href="#" class="product-active_link">
-                                        <i class="product-active-icon fas fa-heart"></i>
-                                    </div>
-                                    <div href="#" class="product-active_link ">
-                                        <i class="product-active-icon fas fa-random"></i>
-                                    </div>
-                                    <div href="#" class="product-active_link">
-                                        <i class="product-active-icon far fa-eye"></i>
-                                    </div>
+                                <div class="product-ratting">
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
                                 </div>
-                            </a>
-                            <h4 class="product-item-name">
-                                <a href="#" class="product-item-name_link">
-                                    Modular Modern
+                            </div>
+                            <div class="col l-2-4 m-3 c-6 wrap-product" >
+                                <a href="#" class="product-item-img_link">
+                                    <img class="product-item-img"
+                                    src="./assest/img/product3.jpg"
+                                    alt="product">
+                                        <div href="#" class="product-addtocart">
+                                            <i class="product-addtocart-icon fas fa-shopping-cart"></i>
+                                            ADD TO CART
+                                        </div>
+                                    <div class="product-active">
+                                        <div href="#" class="product-active_link">
+                                            <i class="product-active-icon fas fa-heart"></i>
+                                        </div>
+                                        <div href="#" class="product-active_link ">
+                                            <i class="product-active-icon fas fa-random"></i>
+                                        </div>
+                                        <div href="#" class="product-active_link">
+                                            <i class="product-active-icon far fa-eye"></i>
+                                        </div>
+                                    </div>
                                 </a>
-                            </h4>
-                            <div class="product-price">
-                                <span class="product-price-old"></span>
-                                <span class="product-price-current">$ 14.00</span>
+                                <h4 class="product-item-name">
+                                    <a href="#" class="product-item-name_link">
+                                        Modular Modern
+                                    </a>
+                                </h4>
+                                <div class="product-price">
+                                    <span class="product-price-old">$ 3.00</span>
+                                    <span class="product-price-current">$ 2.00</span>
+                                </div>
+                                <div class="product-ratting">
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                </div>
                             </div>
-                            <div class="product-ratting">
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
-                                <i class="product-ratting-icon fas fa-star"></i>
+                            <div class="col l-2-4 m-3 c-6 wrap-product" >
+                                <a href="#" class="product-item-img_link">
+                                    <img class="product-item-img"
+                                    src="./assest/img/product4.jpg"
+                                    alt="product">
+                                        <div href="#" class="product-addtocart">
+                                            <i class="product-addtocart-icon fas fa-shopping-cart"></i>
+                                            ADD TO CART
+                                        </div>
+                                    <div class="product-active">
+                                        <div href="#" class="product-active_link">
+                                            <i class="product-active-icon fas fa-heart"></i>
+                                        </div>
+                                        <div href="#" class="product-active_link ">
+                                            <i class="product-active-icon fas fa-random"></i>
+                                        </div>
+                                        <div href="#" class="product-active_link">
+                                            <i class="product-active-icon far fa-eye"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <h4 class="product-item-name">
+                                    <a href="#" class="product-item-name_link">
+                                        Modular Modern
+                                    </a>
+                                </h4>
+                                <div class="product-price">
+                                    <span class="product-price-old"></span>
+                                    <span class="product-price-current">$ 13.00</span>
+                                </div>
+                                <div class="product-ratting">
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                </div>
                             </div>
-                        </div>
+                            <div class="col l-2-4 m-3 c-6 wrap-product" >
+                                <a href="#" class="product-item-img_link">
+                                    <img class="product-item-img"
+                                    src="./assest/img/product5.jpg"
+                                    alt="product">
+                                        <div href="#" class="product-addtocart">
+                                            <i class="product-addtocart-icon fas fa-shopping-cart"></i>
+                                            ADD TO CART
+                                        </div>
+                                    <div class="product-active">
+                                        <div href="#" class="product-active_link">
+                                            <i class="product-active-icon fas fa-heart"></i>
+                                        </div>
+                                        <div href="#" class="product-active_link ">
+                                            <i class="product-active-icon fas fa-random"></i>
+                                        </div>
+                                        <div href="#" class="product-active_link">
+                                            <i class="product-active-icon far fa-eye"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <h4 class="product-item-name">
+                                    <a href="#" class="product-item-name_link">
+                                        Modular Modern
+                                    </a>
+                                </h4>
+                                <div class="product-price">
+                                    <span class="product-price-old"></span>
+                                    <span class="product-price-current">$ 14.00</span>
+                                </div>
+                                <div class="product-ratting">
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                    <i class="product-ratting-icon fas fa-star"></i>
+                                </div>
+                            </div>
                         
 
+                    </div>
                     </div>
                     <div class="product__load-more-item">
                         <a href="#" class="product__load-more-item_link">
@@ -789,11 +957,11 @@
                     </div>
                 </div>
                 <div class="content__banner" >
-                    <div class="grid__row" >
-                        <div class="grid__column-6">
+                    <div class="row " >
+                        <div class="l-6 m-6 c-12">
                             <img class="content__banner-img" src="./assest/img/banner_mid.jpg" alt="">
                         </div>
-                        <div class="grid__column-6">
+                        <div class="l-6 m-6 c-12">
                             <div class="content__banner-info">
                                 <h2 class="content__banner-info_heading">
                                     AXEL - STOOL
@@ -815,7 +983,58 @@
                     <h2 class="suggest__heading">
                         SUGGEST COLLECTION
                     </h2>
-                    <ul class="suggest_list">
+                    <div class="pc-slow-menu pc-slow-menu-suggest">
+                        <i class="pc-slow-menu-icon fas fa-bars"></i>
+                    </div>
+                    <ul class="mobile__suggest-list">
+                        <li class="mobile__suggest-item">
+                            <a href="#" class="mobile__suggest-link">
+                                Office chair
+                            </a>
+                        </li>
+                        <li class="mobile__suggest-item">
+                            <a href="#" class="mobile__suggest-link">
+                                Sofas
+                            </a>
+                        </li>
+                        <li class="mobile__suggest-item">
+                            <a href="#" class="mobile__suggest-link">
+                                Good chiar
+                            </a>
+                        </li>
+                        <li class="mobile__suggest-item">
+                            <a href="#" class="mobile__suggest-link">
+                                Coffee chair
+                            </a>
+                        </li>
+                        <li class="mobile__suggest-item">
+                            <a href="#" class="mobile__suggest-link">
+                                Ourdoor table
+                            </a>
+                        </li>
+                        <li class="mobile__suggest-item">
+                            <a href="#" class="mobile__suggest-link">
+                                Ipsum Chair
+                            </a>
+                        </li>
+                        <li class="mobile__suggest-item">
+                            <a href="#" class="mobile__suggest-link">
+                                Wood Chair
+                            </a>
+                        </li>
+                        <li class="mobile__suggest-item">
+                            <a href="#" class="mobile__suggest-link">
+                                Coffee Tables
+                            </a>
+                        </li>
+                        <li class="mobile__suggest-item">
+                            <a href="#" class="mobile__suggest-link">
+                                Lving Room
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    <ul class="suggest_list hide-on-mobile-tablet">
                         <li class="suggest-item">
                             <a href="#" class="suggest-item_link">
                                 <img class="suggest-item-img" src="./assest/img/suggest1.jpg" alt="" >
@@ -890,11 +1109,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="product">
-                    
-                    <div class="grid__row-2__4">
-
-                        <div class="grid__column-2_4 wrap-product" >
+                <div class="product">       
+                    <div class="row">
+                        <div class="col l-2-4 m-3 c-6 wrap-product" >
                             <a href="#" class="product-item-img_link">
                                 <img class="product-item-img"
                                 src="./assest/img/product3.jpg"
@@ -932,7 +1149,7 @@
                                 <i class="product-ratting-icon fas fa-star"></i>
                             </div>
                         </div>
-                        <div class="grid__column-2_4 wrap-product" >
+                        <div class="col l-2-4 m-3 c-6 wrap-product" >
                             <a href="#" class="product-item-img_link">
                                 <img class="product-item-img"
                                 src="./assest/img/product5.jpg"
@@ -970,7 +1187,7 @@
                                 <i class="product-ratting-icon fas fa-star"></i>
                             </div>
                         </div>
-                        <div class="grid__column-2_4 wrap-product" >
+                        <div class="col l-2-4 m-3 c-6 wrap-product" >
                             <a href="#" class="product-item-img_link">
                                 <img class="product-item-img"
                                 src="./assest/img/product1.jpg"
@@ -1008,7 +1225,7 @@
                                 <i class="product-ratting-icon fas fa-star"></i>
                             </div>
                         </div>
-                        <div class="grid__column-2_4 wrap-product" >
+                        <div class="col l-2-4 m-3 c-6 wrap-product" >
                             <a href="#" class="product-item-img_link">
                                 <img class="product-item-img"
                                 src="./assest/img/product2.jpg"
@@ -1046,7 +1263,7 @@
                                 <i class="product-ratting-icon fas fa-star"></i>
                             </div>
                         </div>
-                        <div class="grid__column-2_4 wrap-product" >
+                        <div class="col l-2-4 m-3 c-6 wrap-product" >
                             <a href="#" class="product-item-img_link">
                                 <img class="product-item-img"
                                 src="./assest/img/product4.jpg"
@@ -1089,20 +1306,20 @@
                     </div>
                 </div>
                 <div class="banner__discount">
-                    <div class="grid__row">
-                        <div class="grid__column-6">
+                    <div class="row">
+                        <div class="col l-6 m-6 c-12">
                             <div class="banner__discount-wrap-img">
                                 <img alt="" class="banner__discount-img" src="./assest/img/banner_discount1.jpg">
                             </div>
                         </div>
-                        <div class="grid__column-6">
-                            <div class="grid__row">
-                                <div class="grid__column-6">
+                        <div class="col l-6 m-6 c-12">
+                            <div class="row">
+                                <div class="col l-6 m-6 c-12">
                                     <div class="banner__discount-wrap-img">
                                         <img alt="" class="banner__discount-img" src="./assest/img/banner_discount2.jpg">
                                     </div>
                                     </div>
-                                    <div class="grid__column-6">
+                                    <div class="col l-6 m-6 c-12">
                                         <div class="banner__discount-wrap-img">
                                             <img alt="" class="banner__discount-img" src="./assest/img/banner_discount3.jpg">
                                         </div>
@@ -1115,8 +1332,8 @@
                     <h2 class="content__most-heading">
                         MOST VIEWED
                     </h2>
-                    <div class="grid__row">
-                        <div class="grid__column-3">
+                    <div class="row">
+                        <div class="col l-3 m-4 c-6">
                             <div class="content__most-product">
                                 <img class="most-product-img" src="./assest/img/product1.jpg" alt="product" >
                                 <div class="most-product-info">
@@ -1143,7 +1360,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="grid__column-3">
+                        <div class="col l-3 m-4 c-6">
                             <div class="content__most-product">
                                 <img class="most-product-img" src="./assest/img/product3.jpg" alt="product" >
                                 <div class="most-product-info">
@@ -1170,7 +1387,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="grid__column-3">
+                        <div class="col l-3 m-4 c-6">
                             <div class="content__most-product">
                                 <img class="most-product-img" src="./assest/img/product4.jpg" alt="product" >
                                 <div class="most-product-info">
@@ -1197,7 +1414,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="grid__column-3">
+                        <div class="col l-3 m-4 c-6">
                             <div class="content__most-product">
                                 <img class="most-product-img" src="./assest/img/product6.jpg" alt="product" >
                                 <div class="most-product-info">
@@ -1224,7 +1441,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="grid__column-3">
+                        <div class="col l-3 m-4 c-6">
                             <div class="content__most-product">
                                 <img class="most-product-img" src="./assest/img/product7.jpg" alt="product" >
                                 <div class="most-product-info">
@@ -1251,7 +1468,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="grid__column-3">
+                        <div class="col l-3 m-4 c-6">
                             <div class="content__most-product">
                                 <img class="most-product-img" src="./assest/img/product8.jpg" alt="product" >
                                 <div class="most-product-info">
@@ -1278,7 +1495,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="grid__column-3">
+                        <div class="col l-3 m-4 c-6">
                             <div class="content__most-product">
                                 <img class="most-product-img" src="./assest/img/product9.jpg" alt="product" >
                                 <div class="most-product-info">
@@ -1305,7 +1522,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="grid__column-3">
+                        <div class="col l-3 m-4 c-6">
                             <div class="content__most-product">
                                 <img class="most-product-img" src="./assest/img/product10.jpg" alt="product" >
                                 <div class="most-product-info">
@@ -1338,8 +1555,8 @@
                     <h2 class="posts__heading">
                         LATEST POSTS
                     </h2>
-                    <div class="grid__row">
-                        <div class="grid__column-4">
+                    <div class="row">
+                        <div class="col l-4 m-4 c-12">
                             <a href="#" class="posts-img_link">
                                 <img class="posts-img" src="./assest/img/post1.png" alt="anh" >
                             </a>
@@ -1363,7 +1580,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="grid__column-4">
+                        <div class="col l-4 m-4 c-12">
                             <a href="#" class="posts-img_link">
                                 <img class="posts-img" src="./assest/img/post2.jpg" alt="anh" >
                             </a>
@@ -1387,7 +1604,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="grid__column-4">
+                        <div class="col l-4 m-4 c-12">
                             <a href="#" class="posts-img_link">
                                 <img class="posts-img" src="./assest/img/post3.jpg" alt="anh" >
                             </a>
@@ -1451,10 +1668,10 @@
             </div>
         </div>
         <div class="footer">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="footer__content">
-                    <div class="grid__row">
-                        <div class="grid__column-2_4">
+                    <div class="row">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__content-heading">
                                 CONTACT US
                             </h3>
@@ -1475,12 +1692,12 @@
                                 <li class="footer__content-list-item-info">
                                     <i class="footer__content-item-icon fas fa-envelope"></i>                                    
                                     <span class="footer__content-item-info">
-                                        trannguyenhn2000@gmail.com
+                                        trannguyen@gmail.com
                                     </span>
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2_4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__content-heading">
                                 SERVICE
                             </h3>
@@ -1512,7 +1729,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2_4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__content-heading">
                                 ACCOUNT
                             </h3>
@@ -1544,7 +1761,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2_4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__content-heading">
                                 INFORMATION
                             </h3>
@@ -1576,7 +1793,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2_4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__content-heading">
                                 NEWSLETTER
                             </h3>
@@ -1610,6 +1827,8 @@
             <i class="fas fa-chevron-up"></i>
         </a>
     </div>
+
+    
 </body>
 
 </html>

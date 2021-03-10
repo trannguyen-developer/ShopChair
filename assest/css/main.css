@@ -59,6 +59,22 @@
     align-items: baseline;
 }
 
+.header__nav-boat_anchor{
+    height: 100%;
+    border-right: 1px rgb(61, 61, 61) solid;
+    border-left: 1px rgb(61, 61, 61) solid;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+}
+
+.header__nav-boat_anchor-icon{
+    color: #888;
+    font-size: 1.8rem;
+    
+}
+
 .header__nav-icon-right{
     color: #888;
     font-size: 1.2rem;
@@ -99,6 +115,8 @@
 
 .grid__wrap{
     padding: 40px 0 40px 0;
+    
+
 }
 
 
@@ -129,6 +147,23 @@
     
 
 
+}
+
+.menu__navbar{
+    position: relative;
+}
+
+.pc-slow-menu{
+    height: 100%;
+    width: 40px;
+    display: none;
+    align-items: center;
+
+}
+
+.pc-slow-menu-icon{
+    font-size: 2.6rem;
+    color: rgb(102, 102, 102);
 }
 
 .header__nav-item:hover .header__nav-country-list{
@@ -267,7 +302,8 @@
 .menu__navbar::before{
     content: '';
     position: absolute;
-    width: 1200px;
+    top: 0;
+    width: 100%;
     height: 3px;
     background: url(http://demo.snstheme.com/wp/simen/wp-content/themes/snssimen/assets/img/double-dotted.png);
     
@@ -276,10 +312,9 @@
 .menu__navbar::after{
     content: '';
     position: absolute;
-    width: 1200px;
+    width: 100%;
     height: 3px;
-    top:212px;
-
+    bottom: 0;
     background: url(http://demo.snstheme.com/wp/simen/wp-content/themes/snssimen/assets/img/double-dotted.png);
     
 }
@@ -341,7 +376,7 @@
     display: flex;
     align-items: center;
     font-size: 1.6rem;
-    padding:0 20px;
+    padding:0 0 0 20px;
     position: relative;
 }
 
@@ -579,7 +614,7 @@
     top: 50px;
     right: 0;
     width: 200px;
-    z-index: 1;
+    z-index: 2;
     background: white;
     box-shadow: 0 0 1px rgb(167, 166, 166);
     display: none;
@@ -593,6 +628,7 @@
 
 .meunu__navbar-cart:hover .meunu__navbar-cart-notify{
     display: flex;
+
 }
 .meunu__navbar-cart-notify::before{
     content: "";
@@ -614,6 +650,74 @@
     display: block;
 }
 
+/* mobile menu */
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-left: 16px;
+}
+.mobile-menu__nav-list{
+    padding-top: 4px;
+    z-index: 1;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: rgb(34,34,34);
+    list-style: none;
+    width: 240px;
+    padding-right: 10px;
+    transform: translateX(-100%);
+    transition: transform ease-in-out 0.3s ;
+
+}
+
+.mobile-menu__nav-item{
+    position: relative;
+}
+
+.mobile-menu__nav-link{
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    font-size: 1.24rem;
+    color: rgb(136, 136, 136);
+    border-bottom: 1px solid rgb(63, 63, 63);
+
+}
+
+.mobile-sub__nav{
+    display: none;
+
+}
+
+.mobile-menu__nav-item:hover .mobile-sub__nav{
+    display: block;
+}
+
+.overflay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 2;
+    animation: fadeIn0 linear 0.3s;
+}
+#mobile-menu_check:checked ~ .overflay{
+    display: block;
+}
+#mobile-menu_check:checked ~ .mobile-menu__nav-list{
+    transform: translateX(0);
+}
+
+#mobile-menu_check{
+    display: none;
+}
 /* banner */
 
 .banner{
@@ -679,6 +783,10 @@
     position: relative;
     overflow: hidden;
 
+}
+
+.content__product-item{
+    margin-top: 22px;
 }
 
 .product__navbar{
@@ -856,6 +964,7 @@
     background: rgb(240, 240, 240);
     padding: 30px 0;
     margin: 60px 0 55px 0;
+    overflow: hidden;
 }
 
 .content__banner-img{
@@ -909,6 +1018,7 @@
 
 .suggest{
     margin-bottom: 30px;
+    position: relative;
 }
 
 .suggest__heading{
@@ -917,6 +1027,48 @@
     margin-bottom: 30px;
     font-weight: 700;
     line-height: 22px;
+}
+
+.mobile__suggest-list{
+    position: absolute;
+    top: 84px;
+    left: -1px;
+    padding:  0;
+    margin: 0;
+    background: #fff;
+    box-shadow: 0px 2px 6px rgb(168, 168, 168);
+    z-index: 1;
+    border-radius: 3px;
+    display: none;
+}
+.mobile__suggest-item{
+
+}
+
+.pc-slow-menu-suggest{
+    display: none;
+}
+
+.pc-slow-menu-suggest:hover ~ .mobile__suggest-list{
+    display: block;
+}
+
+.mobile__suggest-link{
+    width: 180px;
+    height: 40px;
+    display: block;
+    height: 2.4rem;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.3rem;
+    line-height: 2.4rem;
+    padding: 0 16px;
+
+}
+
+.mobile__suggest-link:hover{
+    color: white;
+    background: rgb(71, 71, 223);
 }
 
 .suggest_list{
@@ -1009,6 +1161,7 @@
 }
 
 .banner__discount-img{
+    margin-bottom: 10px;
     overflow: hidden;
     display: block;
     width: 100%;
@@ -1136,6 +1289,11 @@
     list-style-type: none;
     padding: 30px 0;
     border-top:solid 1px rgb(209, 208, 208) ;
+    overflow-x: scroll;
+}
+
+.trademark-list::-webkit-scrollbar{
+    display: none;
 }
 
 .trademark-item_link{
@@ -1321,7 +1479,7 @@
     background: black;
     opacity: 0.4;
     z-index: 1;
-    transform: translateX(-100%);
+    transform: translateX(-101%);
     transition: transform ease-in-out 0.3s;
 }
 
