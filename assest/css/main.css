@@ -1113,7 +1113,7 @@ ul{
 }
 
 .banner__discount{
-    margin-top: 40px;
+    margin: 40px 0 60px 0;
 }
 
 .banner__discount-wrap-img{
@@ -1158,7 +1158,6 @@ ul{
 }
 
 .banner__discount-img{
-    margin-bottom: 10px;
     overflow: hidden;
     display: block;
     width: 100%;
